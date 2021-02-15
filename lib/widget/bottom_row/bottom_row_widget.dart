@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kargomo121a/data/row_data.dart';
 import 'package:kargomo121a/model/row_data_model.dart';
-import 'file:///C:/Users/Aykut/AndroidStudioProjects/kargomo121a/lib/widget/bottom_row/bottom_row_item_widget.dart';
-import 'file:///C:/Users/Aykut/AndroidStudioProjects/kargomo121a/lib/widget/bottom_row/bottom_row_item_widget2.dart';
+import 'package:kargomo121a/widget/bottom_row/bottom_row_item_widget.dart';
+import 'package:kargomo121a/widget/bottom_row/bottom_row_item_widget2.dart';
 
 class BottomRowWidget extends StatefulWidget {
   @override

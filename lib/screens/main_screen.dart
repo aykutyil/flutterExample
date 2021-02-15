@@ -6,7 +6,7 @@ import 'package:kargomo121a/block/try_block.dart';
 import 'package:kargomo121a/widget/blur_container.dart';
 import 'package:kargomo121a/widget/bottom_list_widget.dart';
 import 'package:kargomo121a/widget/bottom_top_row.dart';
-import 'file:///C:/Users/Aykut/AndroidStudioProjects/kargomo121a/lib/widget/bottom_row/bottom_row_widget.dart';
+import 'package:kargomo121a/widget/bottom_row/bottom_row_widget.dart';
 import 'package:kargomo121a/widget/middle_row_widget.dart';
 import 'package:kargomo121a/widget/top_row_widget.dart';
 
