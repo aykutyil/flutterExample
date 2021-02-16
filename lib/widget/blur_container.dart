@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kargomo121a/block/try_block.dart';
 
-double mHeight2 = 375.0;
+double mHeight2 = 342.0;
 
 class BlurContainer extends StatefulWidget {
   VoidCallback onBlurClicked;
