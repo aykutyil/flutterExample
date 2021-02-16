@@ -12,9 +12,8 @@ class BottomRowItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 60,
-      width: 43,
+      width: 52,
       alignment: Alignment.center,
-      margin: EdgeInsets.all(5.0),
       decoration: rowData.clicked
           ? BoxDecoration(
               color: Colors.white,

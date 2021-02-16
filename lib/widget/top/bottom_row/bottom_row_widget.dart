@@ -27,7 +27,7 @@ class _BottomRowWidget extends State {
   Widget buildBottomRow() {
     return Container(
       height: 72,
-      padding: EdgeInsets.all(1.0),
+      padding: EdgeInsets.all(3.0),
       decoration: BoxDecoration(
           color: Colors.indigo.withOpacity(0.9),
           borderRadius: BorderRadius.all(Radius.circular(15.0))),
