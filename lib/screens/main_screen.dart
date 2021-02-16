@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kargomo121a/block/try_block.dart';
-import 'package:kargomo121a/widget/blur_container.dart';
-import 'package:kargomo121a/widget/bottom_list_widget.dart';
-import 'package:kargomo121a/widget/bottom_top_row.dart';
-import 'package:kargomo121a/widget/bottom_row/bottom_row_widget.dart';
-import 'package:kargomo121a/widget/middle_row_widget.dart';
-import 'package:kargomo121a/widget/top_row_widget.dart';
+import 'package:kargomo121a/widget/bottom/bottom_list_widget.dart';
+import 'package:kargomo121a/widget/bottom/bottom_top_row.dart';
+import 'file:///C:/Users/Aykut/AndroidStudioProjects/kargomo121a/lib/widget/blur_container.dart';
+import 'package:kargomo121a/widget/top/bottom_row/bottom_row_widget.dart';
+import 'package:kargomo121a/widget/top/middle_row_widget.dart';
+import 'package:kargomo121a/widget/top/top_row_widget.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -62,7 +62,8 @@ class _MainScreenState extends State {
   @override
   void initState() {
     super.initState();
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     tryBlock.getBlurStream.listen((event) {
       setState(() {
         print(event.toString());
@@ -89,15 +90,15 @@ class _MainScreenState extends State {
           ),
         ),
         SizedBox(
-          height: 15,
+          height: 20,
         ),
         MiddleRowWidget(),
         SizedBox(
-          height: 15,
+          height: 20,
         ),
         BottomRowWidget(),
         SizedBox(
-          height: 5,
+          height: 10,
         )
       ],
     );
@@ -131,16 +132,10 @@ class _MainScreenState extends State {
 
   buildBottomBody() {
     return Column(
-      children: [
-        BottomTopRow(() => onBlurClicked()),
-        bottomList(),
-      ],
+      children: [BottomTopRow(() => onBlurClicked()),
+        SizedBox(height: 20,),
+        BottomListWidget()],
     );
-  }
-
-  bottomList() {
-    return BottomListWidget();
-    /*SizedBox(height:500,child: BottomListWidget())*/
   }
 
   onBlurClicked() {

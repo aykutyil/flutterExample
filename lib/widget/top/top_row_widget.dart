@@ -33,7 +33,8 @@ class TopRowWidgetState extends State<TopRowWidget> {
   Widget buildTopWidget(BuildContext context) {
     return Expanded(
       child: Container(
-        height: MediaQuery.of(context).size.height - 625,
+        height: 42,
+        width: 160,
         padding: EdgeInsets.all(3.0),
         decoration: BoxDecoration(
             color: Colors.indigo.withOpacity(0.9),

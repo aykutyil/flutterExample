@@ -19,8 +19,8 @@ class _MiddleRowWidgetState extends State<MiddleRowWidget> {
 
   Widget buildMiddleRow() {
     return Container(
-      height: MediaQuery.of(context).size.height-635,
-      padding: EdgeInsets.all(5.0),
+      height: 32,
+      padding: EdgeInsets.all(2.0),
       decoration: BoxDecoration(
           color: Colors.indigo.withOpacity(0.9),
           borderRadius: BorderRadius.all(Radius.circular(10.0))
@@ -30,8 +30,8 @@ class _MiddleRowWidgetState extends State<MiddleRowWidget> {
         children: [
           Expanded(
             child: Container(
-              height: MediaQuery.of(context).size.height-645,
-              width: MediaQuery.of(context).size.width-267,
+              height: 22.0,
+              width: 108.0,
               decoration: mFirstRow
                   ? BoxDecoration(
                       color: mFirstRow ? Colors.white : Colors.transparent,
@@ -75,8 +75,8 @@ class _MiddleRowWidgetState extends State<MiddleRowWidget> {
           SizedBox(width: 4,),
           Expanded(
             child: Container(
-              height: MediaQuery.of(context).size.height-645,
-              width: MediaQuery.of(context).size.width-267,
+              height: 22.0,
+              width: 108.0,
               decoration: mSecondRow
                   ? BoxDecoration(
                       color: mSecondRow ? Colors.white : Colors.transparent,
@@ -118,8 +118,8 @@ class _MiddleRowWidgetState extends State<MiddleRowWidget> {
           SizedBox(width: 4,),
           Expanded(
             child: Container(
-              height: MediaQuery.of(context).size.height-645,
-              width: MediaQuery.of(context).size.width-267,
+              height: 22.0,
+              width: 108.0,
               decoration: mThirdRow
                   ? BoxDecoration(
                       color: mThirdRow ? Colors.white : Colors.transparent,

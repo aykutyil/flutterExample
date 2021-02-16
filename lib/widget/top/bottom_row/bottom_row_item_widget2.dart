@@ -11,9 +11,10 @@ class BottomRowItemWidget2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height - 633,
-      width: MediaQuery.of(context).size.width - 349,
+      height: 60,
+      width: 43,
       alignment: Alignment.center,
+      margin: EdgeInsets.all(5.0),
       decoration: rowData.clicked
           ? BoxDecoration(
         color: Colors.white,
@@ -26,16 +27,15 @@ class BottomRowItemWidget2 extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 12,),
             Expanded(
               flex: 1,
-              child: Icon(
-                Icons.move_to_inbox_sharp,
+              child: Image.asset(
+                "assets/havali_poset.png",
                 color: rowData.clicked ? Colors.black : Colors.white,
-              ),
+              )
             ),
             Expanded(
-              flex: 2,
+              flex: 1,
               child: Center(
                 child: Column(
                   children: [
@@ -43,6 +43,7 @@ class BottomRowItemWidget2 extends StatelessWidget{
                       rowSplit[0],
                         style: GoogleFonts.nunito(
                           textStyle: TextStyle(
+                              fontSize: 10,
                               fontWeight: FontWeight.w600,
                               color: rowData.clicked ? Colors.black : Colors.white),
                         )
@@ -51,6 +52,7 @@ class BottomRowItemWidget2 extends StatelessWidget{
                         rowSplit[1],
                         style: GoogleFonts.nunito(
                           textStyle: TextStyle(
+                              fontSize: 10,
                               fontWeight: FontWeight.w600,
                               color: rowData.clicked ? Colors.black : Colors.white),
                         )

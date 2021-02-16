@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kargomo121a/data/row_data.dart';
 import 'package:kargomo121a/model/row_data_model.dart';
-import 'package:kargomo121a/widget/bottom_row/bottom_row_item_widget.dart';
-import 'package:kargomo121a/widget/bottom_row/bottom_row_item_widget2.dart';
+import 'bottom_row_item_widget.dart';
+import 'bottom_row_item_widget2.dart';
 
 class BottomRowWidget extends StatefulWidget {
   @override
@@ -26,11 +26,8 @@ class _BottomRowWidget extends State {
 
   Widget buildBottomRow() {
     return Container(
-      padding: EdgeInsets.all(6.0),
-      height: MediaQuery
-          .of(context)
-          .size
-          .height - 597,
+      height: 72,
+      padding: EdgeInsets.all(1.0),
       decoration: BoxDecoration(
           color: Colors.indigo.withOpacity(0.9),
           borderRadius: BorderRadius.all(Radius.circular(15.0))),

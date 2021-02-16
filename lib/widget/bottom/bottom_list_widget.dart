@@ -38,7 +38,7 @@ class BottomListWidgetState extends State<BottomListWidget> {
     const mColor = const Color(0xFF24303b);
     const mSecondColor = const Color(0xFF1e87e7);
     return Container(
-      height: MediaQuery.of(context).size.height-579,
+      height: 88,
       margin: EdgeInsets.only(bottom: 10),
       child: Card(
         shape: RoundedRectangleBorder(

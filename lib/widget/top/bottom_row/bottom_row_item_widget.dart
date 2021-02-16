@@ -11,13 +11,14 @@ class BottomRowItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height - 633,
-      width: MediaQuery.of(context).size.width - 349,
+      height: 60,
+      width: 43,
       alignment: Alignment.center,
+      margin: EdgeInsets.all(5.0),
       decoration: rowData.clicked
           ? BoxDecoration(
               color: Colors.white,
-              border: Border.all(width: 1.1, color: Colors.blue),
+              border: Border.all(width: 1, color: Colors.blue),
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
             )
           : null,
@@ -26,19 +27,23 @@ class BottomRowItemWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 12,),
+            Expanded(
+                flex: 1,
+                child: Image.asset(
+                  "assets/havali_poset.png",
+                  color: rowData.clicked ? Colors.black : Colors.white,
+                )
+                /*Icon(Icons.move_to_inbox_sharp,
+                  color: rowData.clicked ? Colors.black : Colors.white),*/
+                ),
             Expanded(
               flex: 1,
-              child: Icon(Icons.move_to_inbox_sharp,
-                  color: rowData.clicked ? Colors.black : Colors.white),
-            ),
-            Expanded(
-              flex: 2,
               child: Center(
                 child: Text(rowData.name,
                     style: GoogleFonts.nunito(
                       textStyle: TextStyle(
                           fontWeight: FontWeight.w600,
+                          fontSize: 10,
                           color: rowData.clicked ? Colors.black : Colors.white),
                     )),
               ),
