@@ -2,8 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kargomo121a/block/try_block.dart';
-
-double mHeight2 = 342.0;
+import 'package:kargomo121a/model/mHeightModel.dart';
+import 'package:provider/provider.dart';
 
 class BlurContainer extends StatefulWidget {
   VoidCallback onBlurClicked;
@@ -29,6 +29,7 @@ class BlurContainerState extends State<BlurContainer> {
   @override
   void initState(){
     super.initState();
+    mHeight = Provider.of<HeightModel>(context, listen: false).mHeightValue;
   }
 
   Widget buildBlurContainer() {
@@ -44,7 +45,7 @@ class BlurContainerState extends State<BlurContainer> {
               children: [
                 Positioned(
                   left: MediaQuery.of(context).size.width - 120,
-                  top: _heightver(),
+                  top: mHeight,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -108,13 +109,5 @@ class BlurContainerState extends State<BlurContainer> {
         ),
       ),
     );
-  }
-
-  _heightver()  {
-    tryBlock.getHeightStream.listen((event) {
-        mHeight2 = event;
-    });
-    mHeight = mHeight2;
-    return mHeight;
   }
 }

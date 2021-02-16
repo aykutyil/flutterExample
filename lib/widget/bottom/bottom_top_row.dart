@@ -2,6 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kargomo121a/block/try_block.dart';
+import 'package:kargomo121a/model/mHeightModel.dart';
+import 'package:provider/provider.dart';
 
 class BottomTopRow extends StatefulWidget {
   final VoidCallback onBlurClicked;
@@ -52,11 +54,13 @@ class BuildBottomTopRow extends State<BottomTopRow> {
             )
             ),
           InkWell(
-            onTap: (){tryBlock.setBlur(false);
+            onTap: (){
             RenderBox box = key.currentContext.findRenderObject();
              Offset position = box.globalToLocal(Offset.zero);
-             tryBlock.setHeight(position.dy);
-             print(position.dy.toString());},
+             Provider.of<HeightModel>(context,listen: false).setValue(position.dy);
+             //tryBlock.setHeight(position.dy);
+             print(position.dy.toString());
+              tryBlock.setBlur(false);},
             child: Container(
               key: key,
               child: Row(

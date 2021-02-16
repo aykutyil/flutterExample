@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kargomo121a/block/try_block.dart';
+import 'package:kargomo121a/model/mHeightModel.dart';
+import 'package:kargomo121a/widget/blur_container.dart';
 import 'package:kargomo121a/widget/bottom/bottom_list_widget.dart';
 import 'package:kargomo121a/widget/bottom/bottom_top_row.dart';
-import 'file:///C:/Users/Aykut/AndroidStudioProjects/kargomo121a/lib/widget/blur_container.dart';
 import 'package:kargomo121a/widget/top/bottom_row/bottom_row_widget.dart';
 import 'package:kargomo121a/widget/top/middle_row_widget.dart';
 import 'package:kargomo121a/widget/top/top_row_widget.dart';
+import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -27,14 +29,17 @@ class _MainScreenState extends State {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/background_gradient.png"),
-              fit: BoxFit.cover),
+    return ChangeNotifierProvider(
+      create: (context)=>HeightModel(),
+      child: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/background_gradient.png"),
+                fit: BoxFit.cover),
+          ),
+          child: buildMainScreen(context),
         ),
-        child: buildMainScreen(context),
       ),
     );
   }
